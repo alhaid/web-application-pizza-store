@@ -1,0 +1,88 @@
+/*
+ * Name:  [Hamzah Shafeeq]
+ * Assignment:  [Assignment2]
+
+ * [This is the CSS for the pizza web site. The app will validate
+ *  all the information before it process the order. Also it will show an 
+ *  error message to inform the user where they have made a mistake].
+*/
+body{
+    background-image: url("../images/b.jpg");
+    alignment-adjust: central;
+}
+#iamge{
+    background-image: url("../images/c.png");
+    height: 300px;
+    width: 600px;
+    margin-left: 550px;
+}
+.txt-align{
+    text-align: right;
+}
+#fieldset1 {
+    border-color: green;
+    width: 700px;
+}
+#fieldset1 td, #fieldset2 td{
+    width: 200px;
+}
+#fieldset2{
+    border-color: green;
+    width: 700px;
+}
+#first{
+    margin-top: 10px;
+    margin-left: 550px;
+    width: 70%;
+}
+#second{
+    margin-top: 10px;
+    display: none;
+    width: 70%;
+    margin-left: 550px;
+}
+#table2{
+    width: 500px;
+    border-collapse: collapse;
+    border: 3px solid green;
+}
+#word-customer, #word-address{
+    color: blue;
+}
+#word-pizza-order{
+    color: blue;
+    border-bottom: 2px dashed green;
+    width: 500px;
+    text-align: center;
+}
+#table3{
+    width: 500px;
+    border-collapse: collapse;
+    border: 3px solid green;
+}
+#table3 td{
+    border: 1px dashed green;
+    text-align: left;
+}
+table td h4{
+    display: inline-block;
+}
+#btn-another-order{
+    margin-top: 10px;
+}
+#error{
+    margin: 7px;
+    width: 500px;
+    border: 2px ridge red;
+    color: red;
+    padding: 5px;
+    display: none;
+}
+#warning-input-0, #warning-input-1, #warning-input-1, #warning-input-2,
+#warning-input-3,#warning-input-4, #warning-input-5{
+    color: red;
+    font-size: 0.9em;
+}
+#try{
+    margin: 0 auto;
+}

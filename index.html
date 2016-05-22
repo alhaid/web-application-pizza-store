@@ -1,0 +1,184 @@
+<!--
+ * Name:  [Hamzah Shafeeq]
+ * Assignment:  [Assignment2]
+
+ * [This a web site that can be used to make pizza orders. The app will validate
+ *  all the information before it process the order. Also it will show an 
+ *  error message to inform the user where they have made a mistake].
+ -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Pizza Order</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script type="text/javascript" src="script/javaScript.js"></script>
+    </head>
+    <body>
+        <div id="iamge"></div>
+        <div id="first">
+            <div>Enter you name, address and phone number</div>
+            <form id="form1">
+                <table id="table1">
+                    <tr>
+                        <td class="txt-align">Name:</td>
+                        <td><input type="text" name="input-0" 
+                                   title="first name and last name." autofocus>
+                        </td>
+                        <td id="warning-input-0"></td>
+                    </tr>
+                    <tr>
+                        <td class="txt-align">Address:</td>
+                        <td><input type="text" name="input-1" 
+                                   title="Your full address.">
+                        </td>
+                        <td id="warning-input-1"></td>
+                    </tr>
+                    <tr>
+                        <td class="txt-align">City:</td>
+                        <td><input type="text" name="input-2"></td>
+                        <td id="warning-input-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="txt-align">Province:</td>
+                        <td><input type="text" name="input-3"></td>
+                        <td id="warning-input-3"></td>
+                    </tr>
+                    <tr>
+                        <td class="txt-align">Postal Code:</td>
+                        <td><input type="text" name="input-4" 
+                                   title="Example A0A 0A0."></td>
+                        <td id="warning-input-4"></td>
+                    </tr>
+                    <tr>
+                        <td class="txt-align">Phone:</td>
+                        <td><input type="text" name="input-5" 
+                                   title="555 555 5555"></td>
+                        <td id="warning-input-5"></td>
+                    </tr>
+                </table>
+                <fieldset id="fieldset1">
+                    <legend>Pizza Size</legend>     
+                    <table>
+                        <tr>
+                            <td><input id="opt-small" type="radio" name="size" 
+                                       value="small"><label for="opt-small">
+                                    Small</label></td>
+                            <td><input id="opt-medium" type="radio" name="size"
+                                       value="medium"><label for="opt-medium">
+                                    Medium</label></td>
+                            <td><input id="opt-large" type="radio" name="size" 
+                                       value="large"><label for="opt-large">
+                                    Large</label></td>
+                            <td><input id="opt-extra-large" type="radio" 
+                                       name="size" value="extra Large">
+                                <label for="opt-extra-large">Extra Large
+                                </label></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset id="fieldset2">
+                    <legend>Toppings</legend>
+                    <table>
+                        <tr>
+                            <td><input id="chk-Pepperoni" type="checkbox"
+                                       name="pepperoni" value="Pepperoni">
+                                <label for="chk-Pepperoni">Pepperoni</label>
+                            </td>
+                            <td><input id="chk-Onion" type="checkbox" 
+                                       name="onion" value="Onion">
+                                <label for="chk-Onion">Onion</label>
+                            </td>
+                            <td><input id="chk-Pineapple" type="checkbox" 
+                                       name="pineapple" value="Pineapple">
+                                <label for="chk-Pineapple">Pineapple</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input id="chk-Mushroom" type="checkbox"
+                                       name="mushroom" value="Mushroom">
+                                <label for="chk-Mushroom">Mushroom</label>
+                            </td>
+                            <td><input id="chk-Tomatoes" type="checkbox"
+                                       name="tomatoes" value="Tomatoes">
+                                <label for="chk-Tomatoes">Tomatoes</label>
+                            </td>
+                            <td><input id="chk-GreenPepper" type="checkbox"
+                                       name="greenPepper" value="GreenPepper">
+                                <label for="chk-GreenPepper">Green Pepper
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input id="chk-Bacon" type="checkbox"
+                                       name="bacon" value="Bacon">
+                                <label for="chk-Bacon">Bacon</label>
+                            </td>
+                            <td><input id="chk-Olives" type="checkbox" 
+                                       name="olives" value="Olives">
+                                <label for="chk-Olives">Olives</label>
+                            </td>
+                            <td><input id="chk-ExtraCheese" type="checkbox"
+                                       name="extraCheese" value="ExtraCheese">
+                                <label for="chk-ExtraCheese">Extra Cheese
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <div id="error">error</div>
+                <input id="d" type="button" value="submit order" 
+                       onclick="placeOrder();">
+                <button type="reset" value="Reset">Clear</button>
+            </form>
+        </div>
+        <div id="second">
+            <table id="table2">
+                <tr>
+                    <td id="word-customer"><b>Customer</b></td>
+                    <td id="word-address"><b>Address</b></td>
+                </tr>
+                <tr>
+                    <td id="output-0"></td> <!--name output-->
+                    <td id="output-1"></td> <!--address output-->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="output-2"></td> <!--city output-->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="output-3"></td> <!--province output-->
+                </tr>
+                <tr>
+                    <td id="output-4"></td> <!--phone output-->
+                    <td id="output-5"></td> <!--postal code output-->
+                </tr>
+            </table>
+            <h2 id="word-pizza-order">Pizza Order:</h2>
+            <div></div>
+            <table id="table3">
+                <tr>
+                    <td id="size" colspan="8"></td> <!--size-->
+                    <td id="size-charge"></td> <!--size fee-->
+                </tr>
+                <tr>
+                    <td id="toppings" colspan="8"></td> <!--toppings-->
+                    <td id="toppings-charge"></td> <!--toppings fee-->
+                </tr>
+                <tr>
+                    <td colspan="8"><b>HST Amount:</b></td>
+                    <td id="hst"></td> <!--hst-->
+                </tr>
+                <tr>
+                    <td colspan="8"><b>Total Due:</b></td> 
+                    <td id="total"></td> <!--total-->
+                </tr>
+            </table>
+            <button id="btn-another-order" onclick="anotherOrder()">
+                Another Order</button>
+        </div>
+    </body>
+</html>
